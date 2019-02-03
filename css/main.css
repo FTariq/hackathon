@@ -1,14 +1,13 @@
 body {
-  font: 400 15px Lato, sans-serif;
+  font: 400 15px Montserrat, sans-serif;
   line-height: 1.8;
   color: #818181;
 }
 h2 {
   font-size: 24px;
-  text-transform: uppercase;
   color: #303030;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 h4 {
   font-size: 19px;
@@ -18,9 +17,10 @@ h4 {
   margin-bottom: 30px;
 }
 .jumbotron {
-  background-color: #f4511e;
+  background-color: #0061A9;
   color: #fff;
   padding: 100px 25px;
+  height: 100vh;
   font-family: Montserrat, sans-serif;
 }
 .container-fluid {
@@ -67,6 +67,19 @@ h4 {
 .item span {
   font-style: normal;
 }
+.map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+}
 .panel {
   border: 1px solid #f4511e;
   border-radius:0 !important;
@@ -107,7 +120,7 @@ h4 {
 }
 .navbar {
   margin-bottom: 0;
-  background-color: #f4511e;
+  background-color: #0061A9;
   z-index: 9999;
   border: 0;
   font-size: 12px !important;

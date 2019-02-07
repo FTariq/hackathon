@@ -10,6 +10,9 @@
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="js/jquery.jcarousel-core.js"></script>
+  <script src="js/jquery.jcarousel-pagination.js"></script>
+    <script src="js/jcarousel.responsive.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="icon" href="logos/favicon.ico">
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
@@ -33,7 +36,6 @@
         <li><a href="#location">LOCATION</a></li>
         <li><a href="#partners">PARTNERS</a></li>
         <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#values">VALUES</a></li>
       </ul>
     </div>
   </div>
@@ -42,10 +44,11 @@
 <div class="jumbotron vertical-center">
   <div class="container">
     <div class="slidingup">
+    <img src="logos/warwicktech2.png" alt="logo" height="200">
     <h1><strong>WarwickHACK 19<strong></h1>
     <h3>Saturday 23rd - Sunday 24th February</h3>
+    <a href="https://www.facebook.com/events/289735221897837/" class="social facebook" target="_blank"><i class="fab fa-facebook-square"></i><a/>
     <a href="https://www.eventbrite.co.uk/e/warwickhack-19-tickets-55007374538" class="button" target="_blank">Get your ticket here!<a/>
-    <a href="https://www.facebook.com/events/289735221897837/" class="social facebook" target="_blank"><i class="fa fa-facebook-official"></i><a/>
     <!-- <a href="https://www.facebook.com/warwicktech" target="_blank" class="social facebook"><i class="fab fa-facebook-f"></i></a> -->
     </div>
     <!-- <form>
@@ -59,120 +62,22 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2 col-lg-offset-1"><img src="pics/IMG_4648.jpg" alt="Paris" width="300" height="225"></div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><img src="pics/IMG_4666.jpg" alt="Paris" width="300" height="225"></div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><img src="pics/IMG_4675.jpg" alt="Paris" width="300" height="225"></div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><img src="pics/IMG_4689.jpg" alt="Paris" width="300" height="225"></div>
-    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2"><img src="pics/IMG_4730.jpg" alt="Paris" width="300" height="225"></div>
-  </div>
+<div class="jcarousel-wrapper">
+    <div class="jcarousel">
+        <ul>
+          <li><img src="pics/IMG_4666.jpg" height="275"></li>
+          <li><img src="pics/IMG_4730.jpg" height="275"></li>
+          <li><img src="pics/IMG_4689.jpg" height="275"></li>
+          <li><img src="pics/IMG_4648.jpg" height="275"></li>
+        </ul>
+    </div>
+
+    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+    <p class="jcarousel-pagination"></p>
 </div>
-
-<div class="container download" id="downloads">
-    <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="LinkT">
-            <img alt="AltText" src="pics/IMG_4648.jpg" class="img-responsive">
-        </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="LinkToImage">
-            <img  alt="AltText" src="pics/IMG_4648.jpg" class="img-responsive">
-        </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="LinkToImage">
-            <img src="pics/IMG_4648.jpg" alt="AltText" class="img-responsive">
-        </a>
-        </div>
-
-        <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="LinkToImage">
-            <img alt="AltText" src="pics/IMG_4648.jpg" class="img-responsive">
-        </a>
-        </div>
-    </div>
- </div>
-
- <div class="row rem-space-children">
-    <div class="col-md-2"><img src="pics/IMG_4689.jpg" alt="Paris" height="275"></div>
-    <div class="col-md-2"><img src="pics/IMG_4689.jpg" alt="Paris" height="275"></div>
-    <div class="col-md-2"><img src="pics/IMG_4689.jpg" alt="Paris"  height="275"></div>
-    <div class="col-md-2"><img src="pics/IMG_4689.jpg" alt="Paris"  height="275"></div>
-    <div class="col-md-2"><img src="pics/IMG_4689.jpg" alt="Paris" height="275"></div>
 </div>
-
-<div class="row">
-  <div class="column">
-    <img src="pics/IMG_4689.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" height="275">
-  </div>
-  <div class="column">
-    <img src="pics/IMG_4689.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" height="275">
-  </div>
-  <div class="column">
-    <img src="pics/IMG_4689.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" height="275">
-  </div>
-  <div class="column">
-    <img src="pics/IMG_4689.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow" height="275">
-  </div>
-</div>
-
-
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img src="img1_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <img src="img2_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <img src="img3_wide.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <img src="img4_wide.jpg" style="width:100%">
-    </div>
-
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <!-- Caption text -->
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
-
-    <!-- Thumbnail image controls -->
-    <div class="column">
-      <img class="demo" src="pics/IMG_4689.jpg" onclick="currentSlide(1)" alt="Nature">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="pics/IMG_4689.jpg" onclick="currentSlide(2)" alt="Snow">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="pics/IMG_4689.jpg" onclick="currentSlide(3)" alt="Mountains">
-    </div>
-
-    <div class="column">
-      <img class="demo" src="pics/IMG_4689.jpg" onclick="currentSlide(4)" alt="Lights">
-    </div>
-  </div>
-</div>
-
 
 <!-- Container (About Section) -->
 <div id="about" class="container-fluid">
@@ -187,6 +92,7 @@
           If you have questions, accessibility concerns or require any adjustments, please contact events@warwick.tech.<br><br>
       </h4><br>
 </div>
+
 <div id="location" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
@@ -213,10 +119,10 @@
   <br>
   <div class="row slideanim">
     <div class="col-xs-6">
-      <img src="partners/jpmorgan-vector-logo.png" alt="jpmorgan" width="472" height="96">
+      <a href="https://www.jpmorgan.com/" target="_blank"><img src="partners/jpmorgan-vector-logo.png" alt="jpmorgan" height="96"><a/>
     </div>
     <div class="col-xs-6">
-      <img src="partners/WBSLogo.png" alt="wbs" width="200" height="200">
+      <a href="https://www.wbs.ac.uk/" target="_blank"><img src="partners/WBSLogo.png" alt="wbs" height="200"><a/>
     </div>
   </div>
   <br><br>
@@ -229,21 +135,21 @@
   <div class="row text-center slideanim">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <a href="https://devpost.com/software/how_does_trump_feel/" target="_blank"><img src="portfolio/medium.png" alt="Paris" width="400" height="300"><a/>
+        <a href="https://devpost.com/software/how_does_trump_feel/" target="_blank"><img src="portfolio/medium.png" alt="how_does_trump_feel" width="400" height="300"><a/>
         <p><strong>How_Does_Trump_Feel</strong></p>
         <p>Sentimental analyser with big data analyse of people's tweets and photos</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <a href="https://devpost.com/software/makemebeautiful/" target="_blank"><img src="portfolio/medium (1).png" alt="Paris" width="400" height="300"><a/>
+        <a href="https://devpost.com/software/makemebeautiful/" target="_blank"><img src="portfolio/medium (1).png" alt="MakeMeBeautiful" width="400" height="300"><a/>
         <p><strong>MakeMeBeautiful</strong></p>
         <p>Making faces beautiful again! Save a photo of yourself and reconstruct your face out of other people's!</p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <a href="https://devpost.com/software/weather-g8lp3r/" target="_blank"><img src="portfolio/medium (2).png" alt="Paris" width="400" height="300"><a/>
+        <a href="https://devpost.com/software/weather-g8lp3r/" target="_blank"><img src="portfolio/medium (2).png" alt="wEther" width="400" height="300"><a/>
         <p><strong>wEther</strong></p>
         <p>Insure yourself against the weather</p>
       </div>
@@ -308,49 +214,6 @@
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
 </footer>
-
-<script>
-// Open the Modal
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
-}
-
-// Close the Modal
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
 
 </body>
 </html>

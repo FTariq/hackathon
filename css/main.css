@@ -18,13 +18,14 @@ h2 {
   color: #303030;
   font-weight: 600;
   margin-bottom: 20px;
+  text-decoration: none !important;
 }
 h4 {
   font-size: 19px;
-
   color: #303030;
   font-weight: 400;
   margin-bottom: 30px;
+  text-decoration: none !important;
 }
 
 .rem-space-children {
@@ -39,15 +40,37 @@ h4 {
   height: 100vh;
   font-family: Montserrat, sans-serif;
 }
+
 .vertical-center {
-  min-height: 100%;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
+  text-align: center;  /* align the inline(-block) elements horizontally */
+  font: 0/0 a;         /* remove the gap between inline(-block) elements */
 }
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;    /* vertical alignment of the inline element */
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+                           /* reset the font property */
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 .container-fluid {
   padding: 60px 50px;
+  text-decoration: none !important;
 }
+.container-fluid:hover, .container-fluid:active{
+  /* background-color: rgba(255, 255, 255, 0.075) !important; */
+  text-decoration: none !important;
+}
+
 .btn {
   padding: 12px 35px;
   font-size: 22.5px;
@@ -169,46 +192,67 @@ h4 {
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #f4511e;
+  color: #0061A9;
 }
 
 .social {
   color: white;
-  width: 1em;
-  /* text-align: center;
-  list-style: none; */
-  margin: 5px 5px;
-  display: inline-block;
-  font-size: 20px;
-  border: 1px solid white;
-  border-radius: 100%;
+  background-color: transparent !important;
   text-decoration: none;
+  display: inline-block;
+  font-size: 3em;
+  vertical-align: middle;
+  margin-top: 20px;
+  /*
   box-shadow: 0px 0px 2px #888;
-  padding: 0.5em 0.6em;
+  height: 75px;
+  padding: 5px 5px;
+  list-style: none;
+   text-align: center;
+  /* padding: 0.5em 0.6em; */
+
+  /* padding: 5px 1.8%; */
+  /*
+  margin-right: 3px;
+  margin: 3px 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid white;
+  width: 220px;
+  background-color: rgba(255,255,255, 0);
+  */
+
   -webkit-transition: background-color 300ms ease;
   -moz-transition: background-color 300ms ease;
   transition: background-color 300ms ease;
   cursor: pointer;
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
   -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
   animation: fadein 2s forwards;
 }
 
-.social:hover, .social:active{
-  background-color: rgba(255, 255, 255, 0.075);
+.social:hover, .social:active, .social:visited {
+  /* background-color: rgba(255, 255, 255, 0.075) !important; */
+  text-decoration: none !important;
+  color: white !important
 }
 
 .button {
   color: white;
   border: 1px solid white;
   font-size: 17px;
-  padding: 5px 1.8%;
+  vertical-align:middle;
+  padding: 12.5px 25px;
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
   margin: 3px 6px;
-  margin-right: 3px;
+  margin-top: 20px;
   display: inline-block;
-  text-decoration: none;
-  width: 220px;
   background-color: rgba(255,255,255, 0);
   box-shadow: 0px 0px 2px #888;
   -webkit-border-radius: 4px;
@@ -227,8 +271,10 @@ footer .glyphicon {
   animation: fadein 2s forwards;
 }
 
-.button:hover, .button:active {
+.button:hover, .button:active, .button:visited {
   background-color: rgba(255, 255, 255, 0.075);
+  text-decoration: none !important;
+  color: white !important
 }
 
 .slideanim {visibility:hidden;}
@@ -275,128 +321,126 @@ footer .glyphicon {
   }
 }
 
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Create four equal columns that floats next to eachother */
 .column {
   float: left;
   width: 25%;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
 }
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
 
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
+.jcarousel ul {
+    width: 10000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
+.jcarousel li {
+    width: 200px;
+    float: left;
+    border: 1px solid #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/* Hide the slides by default */
-.mySlides {
-  display: none;
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: #4E443C;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 4px #F0EFE7;
+    -moz-box-shadow: 0 0 4px #F0EFE7;
+    box-shadow: 0 0 4px #F0EFE7;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.jcarousel-control-prev {
+    left: 15px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.jcarousel-control-next {
+    right: 15px;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+/** Carousel Pagination **/
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin: 0;
 }
 
-/* Caption text */
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
+.jcarousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+
+    font-size: 11px;
+    height: 10px;
+    width: 10px;
+    line-height: 10px;
+
+    background: #fff;
+    color: #4E443C;
+    border-radius: 10px;
+    text-indent: -9999px;
+
+    margin-right: 7px;
+
+
+    -webkit-box-shadow: 0 0 2px #4E443C;
+    -moz-box-shadow: 0 0 2px #4E443C;
+    box-shadow: 0 0 2px #4E443C;
 }
 
-img.demo {
-  opacity: 0.6;
-}
+.jcarousel-pagination a.active {
+    background: #4E443C;
+    color: #fff;
+    opacity: 1;
 
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
 }

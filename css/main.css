@@ -54,7 +54,9 @@ a{
 p, p:hover {
   text-decoration: none !important;
 }
-
+h1{
+  font: 400 15px Montserrat, sans-serif;
+}
 h2 {
   font-size: 24px;
   font-weight: 600;
@@ -236,6 +238,9 @@ h4 {
 }
 .panel-footer h3 {
   font-size: 32px;
+}
+h3{
+  font: 400 25px Montserrat, sans-serif;
 }
 .panel-footer h4 {
   color: #aaa;

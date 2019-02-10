@@ -13,9 +13,16 @@ a{
   background-color: #0061A9;
   color: white;
 }
+  /* .container-fluid .img-responsive{
+      display: block;
+      width: auto;
+      max-height: 30%;
+  } */
 #partners{
   color: #0061A9;
   vertical-align: middle;    /* vertical alignment of the inline element */
+  margin: auto;
+  display: block;
 }
 #portfolio{
   background-color: #0061A9;
